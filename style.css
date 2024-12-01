@@ -1,17 +1,17 @@
-/* General styles */
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #000; /* Black background */
-    color: #f8c8dc; /* Light pink text */
+    background-color: #000; 
+    color: #f8c8dc; 
 }
 
-/* Header styles */
+
 header {
-    background: #f8c8dc; /* Light pink background */
-    color: #000; /* Black text */
+    background: #f8c8dc; 
+    color: #000; 
     padding: 1rem 0;
     text-align: center;
 }
@@ -21,14 +21,14 @@ header h1 {
     font-size: 2.5rem;
 }
 
-/* Main content styles */
+
 main {
     padding: 2rem;
     max-width: 800px;
     margin: 0 auto;
-    background-color: #1a1a1a; /* Darker black for content background */
+    background-color: #1a1a1a; 
     border-radius: 10px;
-    box-shadow: 0 0 10px #f8c8dc; /* Light pink glow */
+    box-shadow: 0 0 10px #f8c8dc; 
 }
 
 section {
@@ -36,7 +36,7 @@ section {
 }
 
 section h2 {
-    color: #f8c8dc; /* Light pink */
+    color: #f8c8dc; 
     font-size: 1.8rem;
     border-bottom: 2px solid #f8c8dc;
     padding-bottom: 0.5rem;
@@ -52,12 +52,12 @@ ul {
 footer {
     text-align: center;
     padding: 1rem 0;
-    background: #f8c8dc; /* Light pink background */
-    color: #000; /* Black text */
+    background: #f8c8dc;
+    color: #000; 
 }
 
 footer a {
-    color: #000; /* Black links */
+    color: #000; 
     text-decoration: none;
     font-weight: bold;
 }
