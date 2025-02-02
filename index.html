@@ -219,9 +219,15 @@
         });
 
         nextButton.addEventListener('click', () => {
-    letterPage.style.display = 'none'; // Hide the letter page
-    yayScreen.style.display = 'flex'; // Show the yay screen
+            letterPage.style.display = 'none'; // Hide the letter page
+            yayScreen.style.display = 'flex'; // Show the yay screen
     });
+        backButton.addEventListener('click', () => {
+            document.body.style.backgroundColor = '#ffe4e1';
+            formContainer.style.display = 'block'; // Show the form again
+            redScreen.style.display = 'none'; // Hide the red screen
+            backButton.style.display = 'none'; // Hide the back button
+        });
 
         
 
