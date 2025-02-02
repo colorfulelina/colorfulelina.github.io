@@ -133,6 +133,24 @@
             border-radius: 10px;
             font-size: 16px;
         }
+        #red-screen {
+            display: none;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: red;
+            color: white;
+            padding: 20px;
+            width: 80%;
+            margin: auto;
+            border-radius: 10px;
+        }
+
+        #no-fattie-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            margin-top: 20px;
+        }
 
     </style>
 </head>
@@ -168,6 +186,11 @@
         <h1>ich mag dich so sehr </h1>
         <h1>bis zum mond und zurück. will dein ass. </h1>
     </div>
+    <div id="red-screen">
+        <h1>no fattie</h1>
+        <div class="tenor-gif-embed" data-postid="13418513" data-share-method="host" data-aspect-ratio="1.5" data-width="100%"></div>
+        <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+    </div>
 
     <button id="back-button" style="display: none;" onclick="goBack()">Back</button>
 
@@ -180,6 +203,7 @@
         const yayScreen = document.getElementById('yay-screen');
         const nextButton = document.getElementById('next-button');
         const backButton = document.getElementById('back-button');
+        const redScreen = document.getElementById('red-screen');
 
         submitButton.addEventListener('click', () => {
             const name = nameInput.value.trim().toLowerCase();
@@ -189,7 +213,8 @@
                 letterPage.style.display = 'block'; // Show the letter page
             } else {
                 document.body.style.backgroundColor = 'red';
-                formContainer.style.display = 'none'; // Hide the form, buttons, and GIFs
+                formContainer.style.display = 'none'; 
+                redScreen.style.display = 'block'; 
                 backButton.style.display = 'block'; // Show the back button
             }
         });
@@ -211,5 +236,4 @@
 </body>
 </html>
 
-ChatGPT said:
-ChatGPT
+
