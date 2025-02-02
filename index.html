@@ -3,15 +3,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Play Deftones</title>
+    <title>Day Special</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #ffe4e1;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            position: relative;
+            transition: background-color 1s ease; /* Add smooth transition */
+        }
+
+        #form-container {
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            position: relative;
+        }
+
+        #form-container img.sticker-left,
+        #form-container img.sticker-right {
+            position: absolute;
+            bottom: 10px;
+            width: 100px;
+            height: auto;
+        }
+
+        #form-container img.sticker-left {
+            left: -100px;
+        }
+
+        #form-container img.sticker-right {
+            right: -100px;
+        }
+
+        #main-content {
+            text-align: center;
+            display: none;
+        }
+
+        #yay-screen {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #yay-screen iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        #yay-screen h1 {
+            position: relative;
+            color: white;
+            font-size: 4rem;
+            font-family: 'Poppins', sans-serif;
+            z-index: 1;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        #yes-button {
+            background-color: #ffb6c1;
+            color: white;
+        }
+
+        #no-button {
+            background-color: #ffcccb;
+            color: white;
+            position: absolute;
+        }
+
+        #back-button {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            padding: 10px 20px;
+            background-color: white;
+            color: red;
+            border: 2px solid white;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 10px;
+        }
+
+        #back-button:hover {
+            background-color: lightgray;
+        }
+
+        #letter-page {
+            display: none;
+            padding: 20px;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            width: 80%;
+            margin: auto;
+            border-radius: 10px;
+            background-color: #FFB6C1; /* Set Thistle color */
+        }
+
+        #next-button {
+            margin-top: 20px;
+            background-color: #FFB6C1; /* Thistle color */
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+
+    </style>
 </head>
 <body>
-    <h2>Now Playing: Deftones</h2>
-    <audio controls>
-        <source src="deftones.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+    <div id="form-container">
+        <img class="sticker-left" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjVwb3hhYzM5M2Z5aDRzZDc3bnVrbW41M3Rrc3RxMHJ5NmYzNXpveSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/YSAcNNgOzcdg6xgZYP/giphy.gif" alt="Sticker Left">
+        <img class="sticker-right" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjVwb3hhYzM5M2Z5aDRzZDc3bnVrbW41M3Rrc3RxMHJ5NmYzNXpveSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/YSAcNNgOzcdg6xgZYP/giphy.gif" alt="Sticker Right">
+        
+        <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTFqemQ4bWVjbm8zc2d6Z3k0YjFrMHFjcm9rczE1Y25vb3RueTNkcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/kfRKF0iqA8jyDqq1nH/giphy.gif" alt="Cute animated illustration">
+        <h1>hi</h1>
+        
+        <label for="name">Enter your name here:</label>
+        <input type="text" id="name" placeholder="Your name here">
+        <button id="submit-name">Submit</button>
+    </div>
+
+    <div id="letter-page">
+        <h1>Here's a secret message!</h1>
+        <button id="next-button">Next</button>
+    </div>
+
+    <div id="main-content">
+        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXJpZGxoNG5sbXgzZjR1eThkMHp4eThsNHk4cW9lN293cXUxOTF1dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/10a8AOSeP6Rqfu/giphy.gif" alt="Cute animated illustration">
+        <h2>Are you nice?
+        ich hab mich in deinen augen verloren</h2>
+        <button id="yes-button">Yes</button>
+        <button id="no-button">No</button>
+    </div>
+
+    <div id="yay-screen">
+        <iframe src="https://www.youtube.com/embed/Xa-FQ3yAoOo?autoplay=1&mute=1&loop=1&playlist=Xa-FQ3yAoOo" frameborder="0" allow="autoplay; loop" allowfullscreen></iframe>
+        <img src="https://media.giphy.com/media/fvN5KrNcKKUyX7hNIA/giphy.gif" alt="Cute animated illustration">
+        <h1>ich mag dich so sehr </h1>
+        <h1>bis zum mond und zurück. will dein ass. </h1>
+    </div>
+
+    <button id="back-button" style="display: none;" onclick="goBack()">Back</button>
+
+    <script>
+        const submitButton = document.getElementById('submit-name');
+        const nameInput = document.getElementById('name');
+        const formContainer = document.getElementById('form-container');
+        const mainContent = document.getElementById('main-content');
+        const letterPage = document.getElementById('letter-page');
+        const yayScreen = document.getElementById('yay-screen');
+        const nextButton = document.getElementById('next-button');
+        const backButton = document.getElementById('back-button');
+
+        submitButton.addEventListener('click', () => {
+            const name = nameInput.value.trim().toLowerCase();
+            if (name === 'ryan' || name === 'muraa' || name === 'juwel') {
+                formContainer.style.display = 'none';
+                document.body.style.backgroundColor = '#D8BFD8'; // Change the background to Thistle
+                letterPage.style.display = 'block'; // Show the letter page
+            } else {
+                document.body.style.backgroundColor = 'red';
+                formContainer.style.display = 'none'; // Hide the form, buttons, and GIFs
+                backButton.style.display = 'block'; // Show the back button
+            }
+        });
+
+        nextButton.addEventListener('click', () => {
+    letterPage.style.display = 'none'; // Hide the letter page
+    yayScreen.style.display = 'flex'; // Show the yay screen
+    });
+
+        
+
+        function goBack() {
+            // Reset the background and show the form again
+            document.body.style.backgroundColor = '#ffe4e1';
+            backButton.style.display = 'none'; // Hide the back button again
+            formContainer.style.display = 'block'; // Show the form
+        }
+    </script>
 </body>
 </html>
 
-
+ChatGPT said:
+ChatGPT
