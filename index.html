@@ -46,7 +46,7 @@
             display: none;
         }
 
-        #yay-screen {
+        #yay-screen, #expo {
             display: none;
             position: absolute;
             top: 0;
@@ -128,10 +128,21 @@
         #next-button {
             margin-top: 20px;
             background-color: #FFB6C1; /* Thistle color */
-            color: #FFB6C1;
+            color: #D8BFD8;
             padding: 10px 20px;
             border-radius: 10px;
             font-size: 16px;
+        }
+        #expo {
+            background-image: url('beach.png'); /* Background as beach image */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         #red-screen {
             display: none;
@@ -168,9 +179,13 @@
     </div>
 
     <div id="letter-page">
-        <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExajUxZTl1N3hyMmFycDh0aThkMnUweW9rejkwZ29rcXB6ajZ5MmF2MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/gFIH2RpkxJPhwA8cMK/giphy.gif" alt="Cute animated illustration">
         <h1>Here's a secret message!</h1>
-        <button id="next-button">Next</button>
+        <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExajUxZTl1N3hyMmFycDh0aThkMnUweW9rejkwZ29rcXB6ajZ5MmF2MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/gFIH2RpkxJPhwA8cMK/giphy.gif" alt="Cute animated illustration">
+        <button id="next-button">Open letter</button>
+    </div>
+    <div id="expo">
+        <h1>i like u the mostest ssnecke, will dein ass</h1>
+        <button id="next2">Next</button>
     </div>
 
     <div id="main-content">
@@ -200,10 +215,12 @@
         const formContainer = document.getElementById('form-container');
         const mainContent = document.getElementById('main-content');
         const letterPage = document.getElementById('letter-page');
+        const expo = document.getElementById('expo');
         const yayScreen = document.getElementById('yay-screen');
         const nextButton = document.getElementById('next-button');
         const backButton = document.getElementById('back-button');
         const redScreen = document.getElementById('red-screen');
+        const next2Button = document.getElementById('next2');
 
         submitButton.addEventListener('click', () => {
             const name = nameInput.value.trim().toLowerCase();
@@ -221,8 +238,13 @@
 
         nextButton.addEventListener('click', () => {
             letterPage.style.display = 'none'; // Hide the letter page
-            yayScreen.style.display = 'flex'; // Show the yay screen
+            expo.style.display = 'flex'; // Show the yay screen
     });
+        next2Button.addEventListener('click', () => {
+            expo.style.display = 'none';
+            yayScreen.style.display = 'block';
+        });
+        
         backButton.addEventListener('click', () => {
             document.body.style.backgroundColor = '#ffe4e1';
             formContainer.style.display = 'block'; // Show the form again
