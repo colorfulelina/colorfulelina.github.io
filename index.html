@@ -43,7 +43,10 @@
 
         #main-content {
             text-align: center;
-            display: none;
+            font-family: 'Courier New', Courier, monospace;
+            width: 80%;
+            margin: auto;
+            border-radius: 10px;
         }
 
         #yay-screen {
@@ -214,6 +217,8 @@
         const nameInput = document.getElementById('name');
         const formContainer = document.getElementById('form-container');
         const mainContent = document.getElementById('main-content');
+        const yesButton = document.getElementById('yes-button');
+        const noButton = document.getElementById('no-button');
         const letterPage = document.getElementById('letter-page');
         const expo = document.getElementById('expo');
         const yayScreen = document.getElementById('yay-screen');
@@ -242,6 +247,11 @@
     });
         next2Button.addEventListener('click', () => {
             expo.style.display = 'none';
+            mainContent.style.display = 'block';
+        });
+        
+        yesButton.addEventListener('click', () => {
+            mainContent.style.display = 'none';
             yayScreen.style.display = 'block';
         });
         
@@ -250,6 +260,12 @@
             formContainer.style.display = 'block'; // Show the form again
             redScreen.style.display = 'none'; // Hide the red screen
             backButton.style.display = 'none'; // Hide the back button
+        });
+        noButton.addEventListener('mouseover', () => {
+            const randomX = Math.random() * (window.innerWidth - 100);
+            const randomY = Math.random() * (window.innerHeight - 100);
+            noButton.style.left = `${randomX}px`;
+            noButton.style.top = `${randomY}px`;
         });
 
         
