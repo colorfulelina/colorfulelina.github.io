@@ -28,7 +28,8 @@
         #form-container img.sticker-left,
         #form-container img.sticker-right,
         #expo heart.sticker-left,
-        #expo heart.sticker-right{
+        #expo heart.sticker-right
+        #letter-page img.text{
             position: absolute;
             bottom: 10px;
             width: 100px;
@@ -47,6 +48,9 @@
         }
         #expo img.sticker-right1 {
             right: -200px;
+        }
+        #letter-page img.text {
+            left: -300px;
         }
 
         #main-content {
@@ -99,7 +103,7 @@
         }
 
         #yes-button {
-            background-color: #f8a7a0;
+            background-color: #FFB6C1;
             color: white;
         }
 
@@ -127,6 +131,7 @@
         }
 
         #letter-page {
+            position: relative;
             display: none;
             padding: 20px;
             text-align: center;
@@ -146,6 +151,7 @@
     font-size: 16px;
 }
         #expo {
+            background-color: #F08080;
                 position: relative;
     display: none;
     background-image: url('Screenshot 2025-01-29 at 9.06.04 PM.png'); /* Background as beach image */
@@ -192,6 +198,7 @@
     </div>
 
     <div id="letter-page">
+        <img class = "text" src= "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGV1N2NtMHNtaWkxYno0YjhwMWVtNTh6bHM5dnE2MDVheWtlaDZpcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/vKr2ZVJLx6QNMol8LG/giphy.gif" alt= "sticker">
         <h1>Here's a secret message!</h1>
         <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExajUxZTl1N3hyMmFycDh0aThkMnUweW9rejkwZ29rcXB6ajZ5MmF2MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/gFIH2RpkxJPhwA8cMK/giphy.gif" alt="Cute animated illustration">
         <button id="next-button">Open letter</button>
